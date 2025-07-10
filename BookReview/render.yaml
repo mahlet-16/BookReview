@@ -3,4 +3,4 @@ services:
     name: django-backend
     env: python
     buildCommand: pip install -r requirements.txt
-    startCommand: gunicorn your_project_name.wsgi:application
+    startCommand: gunicorn BookReview.wsgi:application
