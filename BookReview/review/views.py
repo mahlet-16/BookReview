@@ -5,6 +5,9 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework import generics
 
+def index(request):
+    return render(request, 'review/index.html')
+
 class SubmitReviewView(generics.CreateAPIView):
     queryset = Review.objects.all()
     serializer_class = ReviewSerializer
